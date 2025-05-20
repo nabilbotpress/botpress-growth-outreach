@@ -1,2 +1,2 @@
-# botpress-growth-outreach
-botpress growth outreach
+# Botpress Growth Outreach
+
