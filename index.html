@@ -69,12 +69,34 @@
         font-size: 1rem;
       }
     }
+    .arrow-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .animated-arrow {
+      display: block;
+      animation: arrow-move 1.2s infinite cubic-bezier(0.4,0,0.2,1);
+    }
+    @keyframes arrow-move {
+      0% { transform: translateX(0); opacity: 0.7; }
+      50% { transform: translateX(12px); opacity: 1; }
+      100% { transform: translateX(0); opacity: 0.7; }
+    }
   </style>
 </head>
 <body>
   <div class="demo-card">
     <img src="icon.jpeg" alt="Botpress Logo" />
     <h1 class="demo-title">Botpress Chatbot Demo</h1>
+    <!-- Animated Arrow -->
+    <div class="arrow-container">
+      <svg class="animated-arrow" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path d="M12 24H36" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        <path d="M28 16L36 24L28 32" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
   </div>
 
   <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
