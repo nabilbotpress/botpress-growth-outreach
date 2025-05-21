@@ -4,15 +4,85 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Botpress Chatbot Demo</title>
+  <style>
+    body {
+      background: #f8f9fa;
+      color: #2d3436;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .demo-card {
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      padding: 3rem;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .demo-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      margin-bottom: 0.5rem;
+      background: #fff;
+      padding: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+    .demo-card img:hover {
+      transform: scale(1.05);
+    }
+    .demo-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .demo-desc {
+      color: #666;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 320px;
+    }
+    @media (max-width: 500px) {
+      .demo-card {
+        padding: 2rem 1.5rem;
+        max-width: 90vw;
+        border-radius: 20px;
+      }
+      .demo-title {
+        font-size: 1.5rem;
+      }
+      .demo-desc {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="demo-card">
+    <img src="icon.jpeg" alt="Botpress Logo" />
+    <h1 class="demo-title">Botpress Chatbot Demo</h1>
+  </div>
 
-    <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/05/20/19/20250520193405-I968715J.js"></script>
-    <script>
-        window.botpress.on("webchat:ready", () => {
-            botpress.open();
-          });
-    </script>
+  <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/05/20/19/20250520193405-I968715J.js"></script>
+  <script>
+    window.botpress.on("webchat:ready", () => {
+      botpress.open();
+    });
+  </script>
 </body>
 </html>
