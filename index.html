@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/05/20/19/20250520193405-I968715J.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Botpress Chatbot Demo</title>
@@ -90,44 +88,6 @@
   </style>
 </head>
 <body>
-    <script>
-    window.botpress.on("webchat:ready", () => {
-      botpress.open();
-    });
-    window.botpress.init({
-  "botId": "354c24d2-8e1b-4e49-b92e-8fbdaedec2b3",
-  "configuration": {
-    "composerPlaceholder": "",
-    "botName": "The Master Group - Bot Demo",
-    "botAvatar": "https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png",
-    "botDescription": "",
-    "fabImage": "https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png",
-    "website": {
-      "title": "https://master.ca",
-      "link": "https://master.ca"
-    },
-    "email": {},
-    "phone": {
-      "title": "+1 514 527 6811",
-      "link": "+1 514 527 6811"
-    },
-    "termsOfService": {
-      "title": "Terms of service",
-      "link": "https://www.master.ca/professional/terms-and-conditions"
-    },
-    "privacyPolicy": {},
-    "color": "#f76b15",
-    "variant": "soft",
-    "themeMode": "light",
-    "fontFamily": "inter",
-    "radius": 1,
-    "showPoweredBy": false,
-    "additionalStylesheetUrl": "https://files.bpcontent.cloud/2025/05/20/20/20250520201909-L7G1T3P4.css",
-    "allowFileUpload": true
-  },
-  "clientId": "a1f46344-b163-4c3b-a89f-1b68a2fd5700"
-});
-    </script>
   <div class="demo-card">
     <img src="icon.jpeg" alt="Botpress Logo" />
     <h1 class="demo-title">Botpress Chatbot Demo</h1>
@@ -139,5 +99,46 @@
       </svg>
     </div>
   </div>
+</body>
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script>
+  window.botpress.on("webchat:ready", () => {
+    setTimeout(() => botpress.open(), 3000);
+  });
+
+  window.botpress.init({
+    "botId": "354c24d2-8e1b-4e49-b92e-8fbdaedec2b3",
+    "configuration": {
+      "composerPlaceholder": "",
+      "botName": "The Master Group - Bot Demo",
+      "botAvatar": "https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png",
+      "botDescription": "",
+      "fabImage": "https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png",
+      "website": {
+        "title": "https://master.ca",
+        "link": "https://master.ca"
+      },
+      "email": {},
+      "phone": {
+        "title": "+1 514 527 6811",
+        "link": "+1 514 527 6811"
+      },
+      "termsOfService": {
+        "title": "Terms of service",
+        "link": "https://www.master.ca/professional/terms-and-conditions"
+      },
+      "privacyPolicy": {},
+      "color": "#f76b15",
+      "variant": "soft",
+      "themeMode": "light",
+      "fontFamily": "inter",
+      "radius": 1,
+      "showPoweredBy": false,
+      "additionalStylesheetUrl": "https://files.bpcontent.cloud/2025/05/20/20/20250520201909-L7G1T3P4.css",
+      "allowFileUpload": true
+    },
+    "clientId": "a1f46344-b163-4c3b-a89f-1b68a2fd5700"
+  });
+</script>
 </body>
 </html>
