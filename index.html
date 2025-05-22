@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Botpress Chatbot Demo</title>
+  <title>Botpress x Master Chatbot Demo</title>
   <style>
     body {
       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -76,27 +76,27 @@
       text-align: center;
     }
     .chatbot-capabilities ul {
-      list-style: none;
-      padding-left: 0;
+      list-style: disc;
+      padding-left: 1.5rem;
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.5rem;
     }
     .chatbot-capabilities li {
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 400;
       color: #495057;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      border-left: 3px solid #f76b15;
-      transition: all 0.2s ease;
+      padding: 0.25rem 0;
+      line-height: 1.5;
+      background: transparent;
+      box-shadow: none;
+      border-left: none;
+      transition: none;
     }
     .chatbot-capabilities li:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transform: none;
+      box-shadow: none;
     }
     
     .disclaimer-text {
@@ -261,9 +261,9 @@
   <div class="demo-card">
     <div class="demo-header">
       <div class="logo-container">
-        <img src="icon.jpeg" alt="Botpress Logo" />
-        <h1 class="demo-title">Botpress Chatbot Demo</h1>
-        <img src="https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png" alt="Master.ca Logo" />
+        <!-- <img src="icon.jpeg" alt="Botpress Logo" /> -->
+        <h1 class="demo-title">Master.ca AI Agent</h1>
+        <!-- <img src="https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png" alt="Master.ca Logo" /> -->
       </div>
     </div>
     <div class="chatbot-capabilities">
@@ -277,12 +277,6 @@
       </ul>
     </div>
     <p class="disclaimer-text">Disclaimer: This demo bot was built using only publicly available information. A production‐grade integration would connect directly to your secure database or APIs to deliver accurate, up-to-date responses.</p>
-    <p class="demo-desc"></p>
-    <!-- Animated Arrow -->
-    <div class="arrow-container">
-      <svg class="animated-arrow" width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <path d="M12 24H36" stroke="black" stroke-width="3" stroke-linecap="round"/>
-        <path d="M28 16L36 24L28 32" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
   </div>
