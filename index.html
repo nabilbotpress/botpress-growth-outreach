@@ -6,7 +6,7 @@
   <title>Botpress Chatbot Demo</title>
   <style>
     body {
-      background: #f8f9fa;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       color: #2d3436;
       min-height: 100vh;
       margin: 0;
@@ -18,41 +18,85 @@
     .demo-card {
       position: relative;
       background: white;
-      border-radius: 24px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
-      padding: 2rem 6rem 6rem;
-      max-width: 800px; 
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 8px 20px rgba(0,0,0,0.04);
+      padding: 3rem 4rem 4rem;
+      max-width: 750px; 
       width: 100%;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
-      border: 1px solid rgba(0,0,0,0.05);
+      gap: 2rem;
+      border: 1px solid rgba(0,0,0,0.03);
     }
-    .demo-card img {
-      width: 80px;
-      height: 80px;
-      border-radius: 16px;
-      margin-bottom: 0.5rem;
-      background: none;
-      padding: 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease;
+    .demo-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 500px;
+    }
+    .demo-header img {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     }
     .demo-title {
-      font-size: 1.75rem;
-      font-weight: 600;
+      font-size: 2rem;
+      font-weight: 700;
       color: #1a1a1a;
       margin: 0;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      text-align: center;
+      flex: 1;
     }
-    .demo-desc {
-      color: #666;
-      font-size: 1.1rem;
-      line-height: 1.6;
+    .chatbot-capabilities {
+      text-align: left;
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .chatbot-capabilities h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0 0 1.5rem 0;
+      text-align: center;
+    }
+    .chatbot-capabilities ul {
+      list-style: none;
+      padding-left: 0;
       margin: 0;
-      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .chatbot-capabilities li {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #495057;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border-left: 3px solid #f76b15;
+      transition: all 0.2s ease;
+    }
+    .chatbot-capabilities li:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
     @media (max-width: 500px) {
       .demo-card {
@@ -67,6 +111,117 @@
         font-size: 1rem;
       }
     }
+    @media (max-width: 768px) {
+      body {
+        padding: 0 1rem;
+      }
+      
+      .demo-card {
+        padding: 2rem 1.5rem;
+        max-width: 95vw;
+        margin: 1rem;
+        border-radius: 16px;
+        gap: 1.5rem;
+      }
+      
+      .demo-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      
+      .demo-header img {
+        width: 48px;
+        height: 48px;
+      }
+      
+      .demo-title {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      
+      .chatbot-capabilities {
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 0 1rem;
+      }
+      
+      .chatbot-capabilities h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+      
+      .chatbot-capabilities li {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+      }
+      
+      .arrow-container {
+        bottom: 0.5rem;
+        right: 0.5rem;
+      }
+      
+      .animated-arrow {
+        width: 36px;
+        height: 36px;
+        animation: arrow-move-down 1.2s infinite cubic-bezier(0.4,0,0.2,1) !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 0 0.75rem;
+      }
+      
+      .demo-card {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+        margin: 0.5rem;
+      }
+      
+      .demo-title {
+        font-size: 1.3rem;
+        line-height: 1.3;
+      }
+      
+      .chatbot-capabilities {
+        padding: 1rem;
+        margin: 0 0.75rem;
+      }
+      
+      .chatbot-capabilities h3 {
+        font-size: 1rem;
+      }
+      
+      .chatbot-capabilities li {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.7rem;
+      }
+      
+      .chatbot-capabilities ul {
+        gap: 0.5rem;
+      }
+      
+      .arrow-container {
+        bottom: 0.5rem;
+        right: 0.5rem;
+      }
+      
+      .animated-arrow {
+        width: 36px;
+        height: 36px;
+        animation: arrow-move-down 1.2s infinite cubic-bezier(0.4,0,0.2,1) !important;
+      }
+    }
+
     .arrow-container {
       position: absolute;
       bottom: 1rem;
@@ -77,38 +232,38 @@
       animation: arrow-move 1.2s infinite cubic-bezier(0.4,0,0.2,1);
     }
     @keyframes arrow-move {
-      0% { transform: translate(0, 0) rotate(45deg); opacity: 0.7; }
-      50% { transform: translate(12px, 12px) rotate(45deg); opacity: 1; } /* Moves 12px right and 12px down */
-      100% { transform: translate(0, 0) rotate(45deg); opacity: 0.7; }
+      0% { transform: translate(0, 0) rotate(25deg); opacity: 0.7; } /* Changed from 35deg to 25deg (20 degrees anti-clockwise from 45deg) */
+      50% { transform: translate(12px, 12px) rotate(25deg); opacity: 1; } /* Changed from 35deg to 25deg */
+      100% { transform: translate(0, 0) rotate(25deg); opacity: 0.7; } /* Changed from 35deg to 25deg */
     }
     
-    @media (max-width: 500px) {
-      .animated-arrow {
-        animation: arrow-move-down 1.2s infinite cubic-bezier(0.4,0,0.2,1);
-      }
-    }
-
     @keyframes arrow-move-down {
       0% { transform: translate(0, 0) rotate(90deg); opacity: 0.7; }
       50% { transform: translate(0, 12px) rotate(90deg); opacity: 1; }
       100% { transform: translate(0, 0) rotate(90deg); opacity: 0.7; }
-    }
-    .demo-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
     }
   </style>
 </head>
 <body>
   <div class="demo-card">
     <div class="demo-header">
-      <img src="icon.jpeg" alt="Botpress Logo" />
-      <h1 class="demo-title">Botpress Master.ca Chatbot Demo</h1>
+      <div class="logo-container">
+        <img src="icon.jpeg" alt="Botpress Logo" />
+        <h1 class="demo-title">Botpress Chatbot Demo</h1>
+        <img src="https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png" alt="Master.ca Logo" />
+      </div>
     </div>
-    <p class="demo-desc">This chatbot helps customers on the master.ca website discover products, contact support, etc.</p>
+    <div class="chatbot-capabilities">
+      <h3>Capabilities of the chatbot:</h3>
+      <ul>
+        <li>Ask a question</li>
+        <li>Recommend products</li>
+        <li>Book a meeting (<a href="YOUR_CALENDLY_LINK_HERE" target="_blank">Calendly</a>)</li>
+        <li>Create a ticket</li>
+        <li>HITL (Human in the Loop)</li>
+      </ul>
+    </div>
+    <p class="demo-desc"></p>
     <!-- Animated Arrow -->
     <div class="arrow-container">
       <svg class="animated-arrow" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -125,13 +280,11 @@
   });
 
   window.botpress.init({
-    "botId": "354c24d2-8e1b-4e49-b92e-8fbdaedec2b3",
+    "botId": "3634ead0-c501-4ab5-9458-538b0be0b2e3",
     "configuration": {
-      "composerPlaceholder": "",
       "botName": "The Master Group - Bot Demo",
-      "botAvatar": "https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png",
-      "botDescription": "",
-      "fabImage": "https://files.bpcontent.cloud/2025/05/20/20/20250520201714-3CPCO6CE.png",
+      "botAvatar": "https://files.bpcontent.cloud/2025/05/22/14/20250522141503-UFSVXO0K.png",
+      "fabImage": "https://files.bpcontent.cloud/2025/05/22/14/20250522141503-UFSVXO0K.png",
       "website": {
         "title": "https://master.ca",
         "link": "https://master.ca"
@@ -152,10 +305,10 @@
       "fontFamily": "inter",
       "radius": 1,
       "showPoweredBy": false,
-      "additionalStylesheetUrl": "https://files.bpcontent.cloud/2025/05/20/20/20250520201909-L7G1T3P4.css",
+      "additionalStylesheetUrl": "https://files.bpcontent.cloud/2025/05/22/14/20250522141340-XZEV2V94.css",
       "allowFileUpload": true
     },
-    "clientId": "a1f46344-b163-4c3b-a89f-1b68a2fd5700"
+    "clientId": "57e9b08e-61ba-45ed-b1a4-787fa170a936"
   });
 </script>
 </body>
