@@ -98,6 +98,17 @@
       transform: translateY(-1px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
+    
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6c757d;
+      text-align: center;
+      max-width: 600px;
+      line-height: 1.4;
+      margin: 1rem 0 0.5rem 0;
+      font-style: italic;
+    }
+    
     @media (max-width: 500px) {
       .demo-card {
         padding: 2rem 1.5rem;
@@ -151,7 +162,7 @@
       .chatbot-capabilities {
         max-width: 100%;
         padding: 1.5rem;
-        margin: 0 1rem;
+        margin: 1rem;
       }
       
       .chatbot-capabilities h3 {
@@ -165,14 +176,15 @@
       }
       
       .arrow-container {
-        bottom: 0.5rem;
+        bottom: 50%;
         right: 0.5rem;
+        transform: translateY(50%);
       }
       
       .animated-arrow {
         width: 36px;
         height: 36px;
-        animation: arrow-move-down 1.2s infinite cubic-bezier(0.4,0,0.2,1) !important;
+        animation: arrow-move-right 1.2s infinite cubic-bezier(0.4,0,0.2,1) !important;
       }
     }
 
@@ -194,7 +206,7 @@
       
       .chatbot-capabilities {
         padding: 1rem;
-        margin: 0 0.75rem;
+        margin: 0.75rem;
       }
       
       .chatbot-capabilities h3 {
@@ -211,14 +223,15 @@
       }
       
       .arrow-container {
-        bottom: 0.5rem;
+        bottom: 50%;
         right: 0.5rem;
+        transform: translateY(50%);
       }
       
       .animated-arrow {
         width: 36px;
         height: 36px;
-        animation: arrow-move-down 1.2s infinite cubic-bezier(0.4,0,0.2,1) !important;
+        animation: arrow-move-right 1.2s infinite cubic-bezier(0.4,0,0.2,1) !important;
       }
     }
 
@@ -232,15 +245,15 @@
       animation: arrow-move 1.2s infinite cubic-bezier(0.4,0,0.2,1);
     }
     @keyframes arrow-move {
-      0% { transform: translate(0, 0) rotate(25deg); opacity: 0.7; } /* Changed from 35deg to 25deg (20 degrees anti-clockwise from 45deg) */
-      50% { transform: translate(12px, 12px) rotate(25deg); opacity: 1; } /* Changed from 35deg to 25deg */
-      100% { transform: translate(0, 0) rotate(25deg); opacity: 0.7; } /* Changed from 35deg to 25deg */
+      0% { transform: translate(0, 0) rotate(15deg); opacity: 0.7; }
+      50% { transform: translate(4px, 14px) rotate(15deg); opacity: 1; } /* Adjusted to match 15deg angle: cos(15°)≈0.97, sin(15°)≈0.26 */
+      100% { transform: translate(0, 0) rotate(15deg); opacity: 0.7; }
     }
     
-    @keyframes arrow-move-down {
-      0% { transform: translate(0, 0) rotate(90deg); opacity: 0.7; }
-      50% { transform: translate(0, 12px) rotate(90deg); opacity: 1; }
-      100% { transform: translate(0, 0) rotate(90deg); opacity: 0.7; }
+    @keyframes arrow-move-right {
+      0% { transform: translate(0, 0) rotate(0deg); opacity: 0.7; }
+      50% { transform: translate(12px, 0) rotate(0deg); opacity: 1; }
+      100% { transform: translate(0, 0) rotate(0deg); opacity: 0.7; }
     }
   </style>
 </head>
@@ -263,6 +276,7 @@
         <li>HITL (Human in the Loop)</li>
       </ul>
     </div>
+    <p class="disclaimer-text">Disclaimer: This demo bot was built using only publicly available information. A production‐grade integration would connect directly to your secure database or APIs to deliver accurate, up-to-date responses.</p>
     <p class="demo-desc"></p>
     <!-- Animated Arrow -->
     <div class="arrow-container">
