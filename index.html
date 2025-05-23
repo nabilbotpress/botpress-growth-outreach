@@ -62,11 +62,13 @@
     }
     .chatbot-capabilities {
       text-align: left;
-      background: #f8f9fa;
+      background: #f8f9fa; /* Keeping this light grey or you can try #ffffff if you prefer it to match the main card */
       padding: 2rem;
       border-radius: 12px;
       width: 100%;
       max-width: 400px;
+      border: 1px solid #e9ecef; /* Added a light border */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Added a very subtle shadow */
     }
     .chatbot-capabilities h3 {
       font-size: 1.3rem;
@@ -87,16 +89,19 @@
       font-size: 1rem;
       font-weight: 400;
       color: #495057;
-      padding: 0.25rem 0;
+      padding: 0.6rem 0.8rem; 
       line-height: 1.5;
       background: transparent;
-      box-shadow: none;
-      border-left: none;
-      transition: none;
+      /* box-shadow: none; */
+      /* border-left: none; */
+      border-radius: 8px; 
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; 
     }
     .chatbot-capabilities li:hover {
-      transform: none;
-      box-shadow: none;
+      /* transform: none; */
+      /* box-shadow: none; */
+      background-color: #e9ecef; /* Adjusted hover to a slightly darker grey to complement the new border */
+      color: #2d3436; 
     }
     
     .disclaimer-text {
