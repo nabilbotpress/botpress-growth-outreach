@@ -96,7 +96,7 @@
     }
     .chatbot-capabilities li:hover {
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px #00000014;
     }
     
     .disclaimer-text {
@@ -271,20 +271,12 @@
       <ul>
         <li>Ask a question</li>
         <li>Recommend products</li>
-        <li>Book a meeting (<a href="YOUR_CALENDLY_LINK_HERE" target="_blank">Calendly</a>)</li>
+      <li>Book a meeting (<a href="YOUR_CALENDLY_LINK_HERE" target="_blank" style="color: hwb(0 10% 90%);">Calendly</a>)</li>
         <li>Create a ticket</li>
         <li>HITL (Human in the Loop)</li>
       </ul>
     </div>
     <p class="disclaimer-text">Disclaimer: This demo bot was built using only publicly available information. A production‐grade integration would connect directly to your secure database or APIs to deliver accurate, up-to-date responses.</p>
-    <p class="demo-desc"></p>
-    <!-- Animated Arrow -->
-    <div class="arrow-container">
-      <svg class="animated-arrow" width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <path d="M12 24H36" stroke="black" stroke-width="3" stroke-linecap="round"/>
-        <path d="M28 16L36 24L28 32" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
   </div>
 </body>
 <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
